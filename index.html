@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Jean Grace Samalburo — Portfolio</title>
+<meta name="description" content="Portfolio of Jean Grace Samalburo — Anime Magical Tech & Projects (PetCare+)">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div id="nebula"></div>
+<canvas id="particles"></canvas>
+
+<div id="magic-trail"></div>
+
+<header class="topbar">
+  <div class="brand">
+    <div class="logo" aria-hidden="true">JG</div>
+    <div class="brand-text">
+      <h1>Jean Grace Samalburo</h1>
+      <p class="role">Computer Scientist</p>
+    </div>
+  </div>
+  <nav class="nav">
+    <a href="#hero">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+    <a class="resume" href="resume.pdf" target="_blank" rel="noopener">Resume</a>
+  </nav>
+</header>
+
+<main>
+ <section id="hero" class="hero">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <h2 class="hero-title">Hello, I'm <span class="gradient-text">Jean Grace Samalburo</span></h2>
+      <p class="lead" id="hero-lead"></p>
+      <div class="cta">
+        <a class="btn primary sparkle-btn" href="#projects">Explore ✨</a>
+        <a class="btn ghost sparkle-btn" href="#contact">Contact</a>
+      </div>
+    </div>
+
+      <div class="hero-right">
+        <div class="orb-frame" aria-hidden="true">
+          <img src="assets/MyImage.png" alt="Jean Grace" class="avatar">
+          <div class="sparkles"></div>
+          <div class="spell-ring ring1"></div>
+          <div class="spell-ring ring2"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <h3>About Me</h3>
+    <div class="about-card">
+    <p id="about-text"></p>
+  </div>
+</section>
+
+  <section id="skills" class="section">
+  <h3>Skills</h3>
+  <div class="chips">
+    <span data-level=>HTML</span>
+    <span data-level=>CSS</span>
+    <span data-level=>JavaScript</span>
+    <span data-level=>Java</span>
+    <span data-level=>Python</span>
+    <span data-level=>Networking</span>
+  </div>
+</section>
+
+
+  <section id="projects" class="section">
+    <h3>Projects</h3>
+    <div class="grid">
+
+      <!-- Clinic Appointment -->
+      <article class="project">
+        <div class="thumb">Clinic</div>
+        <h4>Clinic Appointment System</h4>
+        <p>Java client-server application with MySQL and socket communication.</p>
+     <div class="project-preview">
+          <img src="ClinicApp.png" alt="To do App" class="project-image" onerror="this.style.display='none'"/>
+        </div>
+    
+        <div class="project-actions">
+          <a class="view-btn" href="assets/ClinicApp.png" target="_blank">View Image</a>
+        </div>
+    </article>
+
+      <!--To-Do App -->
+      <article class="project">
+        <div class="thumb">To-Do</div>
+        <h4>To-Do App</h4>
+        <p>Interactive to-do list with localStorage, edit, and animations.</p>
+      <div class="project-preview">
+          <img src="ToDo.png" alt="To do App" class="project-image" onerror="this.style.display='none'"/>
+        </div>
+    
+        <div class="project-actions">
+          <a class="view-btn" href="assets/ToDo.png" target="_blank">View Image</a>
+        </div>
+    
+    </article>
+
+      <!-- PetCare+ featured project -->
+      <article class="project project-feature">
+        <div class="thumb">PetCare+</div>
+        <h4>PetCare+ Services</h4>
+        <p>Design & mockups for a pet care service — full branding, hero illustration, and UI concept.</p>
+
+        <div class="project-preview">
+          <img src="assets/petcare.png" alt="PetCare design" class="project-image" onerror="this.style.display='none'"/>
+        </div>
+
+        <div class="project-actions">
+          <a class="view-btn" href="assets/petcare.png" target="_blank">View Image</a>
+        </div>
+      </article>
+
+      <!-- Model Design featured project -->
+      <article class="project project-feature">
+        <div class="thumb">Model</div>
+        <h4>Model Design</h4>
+        <p>Real-time road monitoring system using CCTV and sensors to prevent accidents and ensure rapid response.</p>
+
+        <div class="project-preview">
+          <video controls class="project-video" src="assets/EOTR.mp4"></video>
+        </div>
+
+        <div class="project-actions">
+          <a class="view-btn" href="assets/EOTR.mp4" target="_blank">Play Video</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+ <section id="contact" class="section">
+  <h3>Contact</h3>
+  <div class="contact-card">
+    <p>Email: <span id="email" class="clickable">samalburo.jeangrace@gmail.com</span></p>
+    <button id="copy-btn">Copy Email 📋</button>
+    <p><a class="download-resume" href="resume.pdf" download>Download Resume (PDF)</a></p>
+  </div>
+</section>
+
+
+<button id="assistant" aria-label="Assistant" title="Ask Jean's assistant">🌸</button>
+
+<!-- assistant panel -->
+<div id="assistant-panel" aria-hidden="true">
+  <div class="assistant-header">
+    <div class="assistant-title">Jean's Assistant</div>
+    <button id="assistant-close">✕</button>
+  </div>
+  <div id="assistant-body"></div>
+  <form id="assistant-form">
+    <input id="assistant-input" placeholder="Ask: 'Who is Jean?' or 'Show skills'">
+    <button type="submit">Send</button>
+  </form>
+</div>
+
+<footer class="footer">
+  <small>Copyright © 2025 Jean Grace Samalburo Portfolio. All Rights Reserved</small>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
